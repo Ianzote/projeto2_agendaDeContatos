@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1>">
+    <title>Minha Agenda</title>
+    <style>
+        #form-agenda {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin: 5px 0 0 10px;
+            gap: 10px;
+            width: 960px;
+            max-width: 100%;
+        }
+        #tabela-container{
+            width: 500px;
+            max-width: 100%;
+            margin: 0 5px 0 10px;
+        }
+        #tabela-agenda {
+            border-width: 2px;
+            border-style: solid;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha Agenda De Contatos</h1>
+    <form id="form-agenda" method="GET">
+        <label for="espaço-nome">Nome:</label>
+        <input id="espaço-nome" type="text" name="nome" placeholder="Nome" required>
+
+        <label for="espaço-phone">Telefone:</label>
+        <input id="espaço-phone" type="text" name="telefone" placeholder="(DD) 9XXXX-XXXX"
+        pattern="\(\d{2}\) 9\d{4}-\d{4}"  maxlength="15" required>
+
+        <button type="submit" >Adicionar</button>
+    </form>
+    <br>
+    <div id="titulo-tabela-container">
+        <h2>Contatos</h2>
+    </div>
+    <div id="tabela-container">
+        <table id="tabela-agenda"> 
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <!-- Contatos -->
+                <tbody>
+                    <tr>
+                        <td>--</td>
+                        <td>(DD) 9XXXX-XXXX</td>
+                </tbody>
+            </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
